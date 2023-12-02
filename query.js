@@ -40,7 +40,6 @@ router.get("/category", (req, res) => {
 // get film by category
 router.get("/films/category/:category_id", (req, res) => {
   const { category_id } = req.params;
-  console.log(category_id);
 
   const query = `SELECT f.*, c.name FROM film f
                    JOIN film_category fc on f.film_id = fc.film_id
